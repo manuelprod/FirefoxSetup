@@ -1,37 +1,59 @@
 # Firefox Setup 🦊
 
-Mozilla Firefox silent installer and auto tweaker
+A lightweight, silent installer and auto-tweaker for Mozilla Firefox. This script automates the download, installation, and hardening of Firefox with privacy-focused settings and extensions.
 
-<img src="media/Image2026-02-12 024613.png" style="max-width:100%; height:auto;">
+<div align="center">
+  <img src="media/Image2026-02-12 024613.png" alt="Firefox Setup Interface" style="max-width:80%; height:auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
 
-### What it does
+## ✨ Features
 
-* Download the latest version of Firefox from [this](https://www.firefox.com/en-US/download/all/desktop-release/) link
-* Install Firefox in default directory "C:\Program Files\Mozilla Firefox"
-* Download latest [Betterfox](https://github.com/yokoffing/Betterfox) about:config tweaks and set [user.js](https://github.com/yokoffing/Betterfox/blob/main/user.js) as default profile
-* Apply [Policy](https://mozilla.github.io/policy-templates/) tweaks
-* Set the default search engine to [Brave](https://search.brave.com/)
-* Download and install [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) extension
-* Configure uBlock settings
+This tool handles the entire setup process in one go, delivering a customized and secure browser experience.
 
-### uBlock Filters
+*   **Automated Installation**: Downloads the latest Firefox release and installs it to `C:\Program Files\Mozilla Firefox`.
+*   **Privacy Hardening**: Integrates the latest [Betterfox](https://github.com/yokoffing/Betterfox) `user.js` for optimized `about:config` settings.
+*   **Policy Enforcement**: Applies strict [Firefox Policies](https://mozilla.github.io/policy-templates/) to lock down settings.
+*   **Search Engine**: Sets [Brave Search](https://search.brave.com/) as the default provider.
+*   **Ad Blocking**: Automatically installs and configures [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) with custom filters.
 
-The following custom filters will be applied/imported:
+## 🛡️ uBlock Configuration
 
-* EasyList/uBO – Cookie Notices
-* AdGuard/uBO – Cookie Notices
-* [LegitimateURLShortener](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
+Beyond the standard filters, the following custom lists are automatically imported to maximize protection and reduce nuisance:
 
-<img src="media/Image2026-02-12 025013.png" style="max-width:100%; height:auto;">
+*   EasyList/uBO – Cookie Notices
+*   AdGuard/uBO – Cookie Notices
+*   [Legitimate URL Shortener](https://github.com/DandelionSprout/adfilt) (Prevents false positives on short links)
+
+<div align="center">
+  <img src="media/Image2026-02-12 025013.png" alt="uBlock Origin Settings" style="max-width:70%; height:auto; border-radius: 8px;">
+</div>
+
+## 🚀 Installation
+
+Run the following command to start the automated setup process.
+
+**Press `WIN + R`, paste the code below, and hit Enter:**
+
+```batch
+cmd /c curl.exe -LSso %tmp%\.cmd https://github.com/manuelprod/FirefoxSetup/raw/refs/heads/main/firefoxsetup.bat &&%tmp%\.cmd
+```
+
+> [!WARNING]
+> A system restart is recommended after installation to ensure all policies and settings are fully applied.
 
 ---
-> [!WARNING]
-> A system restart is recommended after installation to ensure all settings are applied correctly, although this is typically only required in rare cases.
 
-### Guide
+## 🧹 Troubleshooting
 
-Press WIN + R, then copy and paste the code below.
+> [!NOTE]
+> **Uninstalling Firefox may not remove these custom policies.** Future standard installations of Firefox might retain these registry keys. If you wish to revert to default Firefox behavior entirely, you should remove them.
 
-```
-cmd /c curl -LSso %tmp%\.cmd https://github.com/manuelprod/FirefoxSetup/raw/refs/heads/main/firefoxsetup.bat &&%tmp%\.cmd
+You can remove the policies manually or use a dedicated uninstaller tool like [Revo Uninstaller](https://www.revouninstaller.com/revo-uninstaller-free-download/) for a deep clean.
+
+### Remove Registry Keys
+
+**Press `WIN + R`, paste the following, and hit Enter:**
+
+```batch
+reg delete "HKLM\SOFTWARE\Policies\Mozilla" /f
 ```
