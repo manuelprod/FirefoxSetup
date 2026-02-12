@@ -1,18 +1,20 @@
-# Firefox Setup
+# Firefox Setup 🦊
 
 Mozilla Firefox silent installer and auto tweaker
 
+<img src="media/Image2026-02-12 024613.png" style="max-width:100%; height:auto;">
+
 ### What it does
 
-* Download the latest version of Firefox from [this](https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US) link
+* Download the latest version of Firefox from [this](https://www.firefox.com/en-US/download/all/desktop-release/) link
 * Install Firefox in default directory "C:\Program Files\Mozilla Firefox"
-* Download latest [Betterfox](https://github.com/yokoffing/Betterfox) about:config tweaks and set [user.js](https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js) as default profile
+* Download latest [Betterfox](https://github.com/yokoffing/Betterfox) about:config tweaks and set [user.js](https://github.com/yokoffing/Betterfox/blob/main/user.js) as default profile
 * Apply [Policy](https://mozilla.github.io/policy-templates/) tweaks
-* Set the default search engine to Brave
+* Set the default search engine to [Brave](https://search.brave.com/)
 * Download and install [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) extension
 * Configure uBlock settings
 
-### Filters
+### uBlock Filters
 
 The following custom filters will be applied/imported:
 
@@ -20,10 +22,16 @@ The following custom filters will be applied/imported:
 * AdGuard/uBO – Cookie Notices
 * [LegitimateURLShortener](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
 
-### Download
+<img src="media/Image2026-02-12 025013.png" style="max-width:100%; height:auto;">
 
-WIN+R
+---
+> [!WARNING]
+> A system restart is recommended after installation to ensure all settings are applied correctly, although this is typically only required in rare cases.
+
+### Guide
+
+Press WIN + R, then copy and paste the code below.
 
 ```
-cmd /c curl -LSo %tmp%\.cmd https://github.com/manuelprod/FirefoxSetup/raw/refs/heads/main/firefoxsetup.bat &&%tmp%\.cmd
+cmd /c curl -LSso %tmp%\.cmd https://github.com/manuelprod/FirefoxSetup/raw/refs/heads/main/firefoxsetup.bat &&%tmp%\.cmd
 ```
