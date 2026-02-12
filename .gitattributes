@@ -11,3 +11,4 @@ large-file.bin filter=lfs diff=lfs merge=lfs -text
 WinOff/Gaming/Xbox/Gaming[[:space:]]Services/** filter=lfs diff=lfs merge=lfs -text
 WinOff/Apps/WebCord/webcord-squirrel-x64.exe filter=lfs diff=lfs merge=lfs -text
 *.msixbundle filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
