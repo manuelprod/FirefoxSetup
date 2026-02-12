@@ -16,7 +16,7 @@ This tool handles the entire setup process in one go, delivering a customized an
 *   **Search Engine**: Sets [Brave Search](https://search.brave.com/) as the default provider.
 *   **Ad Blocking**: Automatically installs and configures [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) with custom filters.
 
-## 🛡️ uBlock Configuration
+## 🛡️ uBlock filter lists
 
 Beyond the standard filters, the following custom lists are automatically imported to maximize protection and reduce nuisance:
 
@@ -30,7 +30,9 @@ Beyond the standard filters, the following custom lists are automatically import
 
 ## 🚀 Installation
 
-Run the following command to start the automated setup process.
+method 1 - download and run the latest [release](https://github.com/manuelprod/FirefoxSetup/releases/download/v1.0.0/Firefox.Setup.1.0.0.exe)
+
+method 2 - Run the following command to start the automated setup process.
 
 **Press `WIN + R`, paste the code below, and hit Enter:**
 
